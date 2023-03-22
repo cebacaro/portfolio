@@ -1,11 +1,20 @@
 import React from "react";
 
-function HeaderNav() {
+export const HeaderNav = () => {
   return (
-    <div>
-      <h1>header</h1>
-    </div>
-  );
-}
+    <header className="header">
+      <div className="logo">
+        <span>C</span>
+        <h3>Cesar Bacaro Ley</h3>
+      </div>
 
-export default HeaderNav;
+      <nav>
+        <ul>
+          <li></li>
+          <li>{/* <NavLink to="/portfolio">Portfolio</NavLink> */}</li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
