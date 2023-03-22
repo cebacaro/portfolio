@@ -344,7 +344,7 @@ code {
   position: sticky;
 
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 
   text-align: center;
   font-size: 10px;
