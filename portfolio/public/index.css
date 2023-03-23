@@ -68,6 +68,11 @@ $gradient-top-left: linear-gradient(225deg, #001219ff, #005f73ff, #0a9396ff, #e9
 $gradient-bottom-left: linear-gradient(315deg, #001219ff, #005f73ff, #0a9396ff, #e9d8a6ff, #ee9b00ff, #94d2bdff, #ca6702ff, #bb3e03ff, #ae2012ff, #9b2226ff);
 $gradient-radial: radial-gradient(#001219ff, #005f73ff, #0a9396ff, #e9d8a6ff, #ee9b00ff, #94d2bdff, #ca6702ff, #bb3e03ff, #ae2012ff, ; */
 
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Slab', serif; */
+
 body {
   height: 100%;
   margin: 0;
@@ -101,7 +106,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-cards: center;
   text-align: center;
   z-index: -1;
   position: relative;
@@ -125,7 +130,7 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-cards: center;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.121);
   border-radius: 5px;
@@ -136,7 +141,7 @@ code {
 
 .textContainer h1 {
   font-size: 60px;
-  font-family: "Bebas Neue", cursive;
+
   /* text-shadow: 2px 3px 3px rgb(255, 9, 247); */
   font-style: italic;
 }
@@ -162,7 +167,7 @@ code {
   flex-direction: column;
   /* width: 500px; */
   text-align: justify;
-  align-items: center;
+  align-cards: center;
   padding: 1rem;
 }
 
@@ -171,7 +176,7 @@ code {
   width: 98%;
   display: flex;
   align-content: center;
-  align-items: center;
+  align-cards: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.44);
   margin-bottom: 25px;
   margin: 0 auto;
@@ -184,7 +189,7 @@ code {
   flex-direction: row;
   margin-left: 0%;
   position: absolute;
-  align-items: center;
+  align-cards: center;
 
 }
 
@@ -250,7 +255,7 @@ code {
   text-orientation: upright;
   writing-mode: vertical-lr;
   color: rgba(233, 216, 165);
-  ;
+
   padding: 4px;
   border-radius: 5px;
   text-decoration: none;
@@ -287,13 +292,58 @@ code {
   justify-content: right;
 }
 
+/* PORTFOLIO */
+section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 3rem;
+  margin: 1rem rem;
+}
 
+.card {
+  width: 15rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.319);
+  grid-column: span 3;
+  font-size: 1.2rem;
+  padding: 15px;
+  border: 2px solid white;
+  gap: 1rem;
+  text-align: center;
+}
 
+.card p {
+  line-height: 1rem;
+  text-align: left;
 
+}
+
+.card h1 {
+  color: white;
+}
+
+.card.active p {
+  display: block;
+}
+
+.card.active {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  order: 0;
+  height: auto;
+}
+
+.card.is-inactive {
+  grid-column: span 2;
+}
 
 
 #home a {
-
   text-decoration: none;
 }
 
@@ -317,7 +367,7 @@ code {
   width: fit-content;
   flex: 1;
   display: flex;
-  z-index: -1;
+  /* z-index: -1; */
   justify-content: center;
   align-items: center;
 }
@@ -326,12 +376,12 @@ code {
   display: flex;
   position: sticky;
   justify-content: center;
-  /* align-items: flex-end; */
+  /* align-cards: flex-end; */
   text-align: center;
   font-size: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.44);
   padding: 5px;
   color: rgba(255, 255, 255, 0.566);
   width: 98%;
-  margin: 0 auto;
+  margin-bottom: 0 auto;
 }
