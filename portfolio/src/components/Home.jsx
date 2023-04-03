@@ -1,39 +1,40 @@
 import React from "react";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 import { motion as m } from "framer-motion";
+import clip from "./images/clip.mp4";
 
 export const Home = () => {
-  const [text] = useTypewriter({
-    words: [
-      "6 seconds is not enough",
-      "To check my work",
-
-      "Is where I let my imagination fly!!",
-    ],
-    delaySpeed: 1000,
-  });
+  // const [text] = useTypewriter({
+  //   words: ["Que Bola!!!", "Check out my work"],
+  //   delaySpeed: 1000,
+  // });
   return (
     <m.div
       // change initial to 200%
-      initial={{ y: "100%" }}
-      animate={{ y: "0%" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 1 }}
       transition={{ duration: 0.8, easy: "easyOut" }}
-      className="textContainer"
+      className="textContainer flex justify-center self-center content-center h-[80vh] w-[100%] "
     >
-      <div className="mainText">
-        <h1>
-          <span>{text}</span>
-          <Cursor cursorColor=" white" />
-        </h1>
+      <div className="overlay absolute  h-[80vh] w-[100%]  bg-black bg-opacity-40 " />
+      <video
+        className=" flex  justify-center w-full"
+        src={clip}
+        autoPlay
+        loop
+        muted
+      />
 
-        <p>
-          "Hold yourself responsible for a higher standard than anybody else
-          expects of you. <br />
-          Never excuse yourself. Never pity yourself. Be a hard master to
-          yourself-and be lenient to everybody else.” <br />
-          <strong> "Henry Ward Beecher"</strong>
-        </p>
+      <div className="mainText">
+        <m.h1
+          style={{ display: "inline-block" }}
+          initial={{ y: "-100%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Welcome to my site
+        </m.h1>
       </div>
     </m.div>
   );
