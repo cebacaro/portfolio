@@ -29,7 +29,7 @@ export const Contact = () => {
     document.getElementById("success-message").style.display = "inline";
   };
   return (
-    <>
+    <div>
       <h3 className="text-gray-400  justify-center top-20 text-[40px] tracking-[12px] absolute  uppercase">
         Contact
       </h3>
@@ -41,8 +41,8 @@ export const Contact = () => {
         className="contact  h-[80vh] w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
       >
         <div className="flex flex-col space-y-10 relative top-20">
-          <h4 className="text-2xl text-center text-white font-semibold">
-            I have what you looking for. <br /> Lets Talk.
+          <h4 className="text-3xl text-center text-white font-semibold">
+            Lets Talk.
           </h4>
 
           <div>
@@ -69,21 +69,21 @@ export const Contact = () => {
           ref={form}
           onSubmit={sendEmail}
         >
-          <label className="pt-2 text-gray-600">Name</label>
+          <label className="pt-2 text-gray-400 flex">Name</label>
           <input
             type="text"
             name="user_name"
             placeholder="Name"
             className="w-full rounded-lg bg-gray-400"
           />
-          <label className="pt-2 text-gray-600">Email</label>
+          <label className="pt-2 text-gray-400 flex">Email</label>
           <input
             type="email"
             name="user_email"
             placeholder="E-mail"
-            className="w-full rounded-lg bg-gray-400"
+            className="w-full rounded-lg bg-gray-400 "
           />
-          <label className="pt-2 text-gray-600">Message</label>
+          <label className="pt-2 text-gray-400 flex">Message</label>
           <textarea
             rows="20"
             cols="50"
@@ -107,7 +107,7 @@ export const Contact = () => {
           </h4>
         </div>
       </m.div>
-    </>
+    </div>
   );
 };
 export default Contact;

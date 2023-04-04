@@ -11,7 +11,7 @@ export const SidebarR = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: ".5",
-          delay: "2",
+          delay: "1",
         }}
         className="homeR"
       >
@@ -19,7 +19,7 @@ export const SidebarR = () => {
           <motion.p whileHover={{ scale: 1.1 }}>
             <NavLink
               to="/about"
-              className="text-yellow-100 uppercase tracking-[10px]  border border-sky-500 rounded-md p-2 font-bold text-[15px] hover:scale-100 duration-300 hover:text-teal-400"
+              className="text-yellow-100 uppercase tracking-[10px]  border border-sky-500 rounded-md p-2 font-bold text-[5px] md:text-[10px] lg:text-[20px] hover:scale-100 duration-300 hover:text-teal-400"
             >
               About
             </NavLink>
@@ -29,7 +29,7 @@ export const SidebarR = () => {
             <NavLink
               to="/portfolio"
               className="text-yellow-100 uppercase tracking-[10px]  content-center border border-sky-500
-          rounded-md p-2 font-bold text-[15px] hover:scale-100 duration-300 hover:text-teal-400
+          rounded-md p-2 font-bold text-[5px] md:text-[10px] lg:text-[20px] hover:scale-100 duration-300 hover:text-teal-400
               "
             >
               Portfolio
