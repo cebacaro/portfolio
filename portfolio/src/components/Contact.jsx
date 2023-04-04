@@ -25,8 +25,8 @@ export const Contact = () => {
           alert("something went wrong");
         }
       );
-    // document.getElementById("contact-form").style.display = "none";
-    // document.getElementById("success-message").style.display = "inline";
+    document.getElementById("contact-form").style.display = "none";
+    document.getElementById("success-message").style.display = "inline";
   };
   return (
     <>
@@ -64,7 +64,8 @@ export const Contact = () => {
         </div>
 
         <form
-          className="contact-form flex mt-10 p-7 flex-col h-[500px] w-[400px]"
+          className=" flex mt-10 p-7 flex-col h-[500px] w-[400px]"
+          id="contact-form"
           ref={form}
           onSubmit={sendEmail}
         >
@@ -99,8 +100,8 @@ export const Contact = () => {
           </button>
         </form>
 
-        <div className="success-message">
-          <h4 className="text-center text-sm pb-4 hidden">
+        <div id="success-message">
+          <h4 className="text-center text-sm pb-4 text-gray-300">
             Thank you for reaching out! <br /> I will get back with you as soon
             as I am able!
           </h4>

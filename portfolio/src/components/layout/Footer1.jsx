@@ -1,5 +1,6 @@
 import React from "react";
-import SouthIcon from "@mui/icons-material/South";
+
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 
 function Footer1() {
   return (
@@ -11,8 +12,9 @@ function Footer1() {
         Contact Me
       </a>
       <div className="absolute border border-sky-500  rounded-full h-[32px] w-[32px] flex justify-center mt-8 " />
-      <SouthIcon className="icon text-yellow-500  animate-bounce flex place-self-center mb-4" />
+      <ChevronDoubleDownIcon className="icon text-yellow-500  animate-bounce flex place-self-center mb-3 h-5 w-5" />
     </div>
   );
 }
+
 export default Footer1;

@@ -22,7 +22,7 @@ function MisRutas() {
 
           {/*Main*/}
           <section
-            className="content h-[85vh] flex w-full 
+            className="content h-[87vh] flex w-full 
           justify-center "
           >
             <AnimatePresence initial={true}>
