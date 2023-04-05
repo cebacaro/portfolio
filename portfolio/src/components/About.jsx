@@ -3,8 +3,10 @@ import { motion as m } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="flex flex-col">
-      <h1 className="text-white">About Me</h1>
+    <div className="portfolio    h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
+      <h3 className="text-gray-400 justify-center  top-5 text-[40px] tracking-[12px] absolute uppercase">
+        about
+      </h3>
       <m.div
         initial={{ y: "100%" }}
         animate={{ y: "0%" }}
@@ -18,7 +20,7 @@ export const About = () => {
             src={require("./images/-10327881921485465420.0 (1).jpg")}
             alt="foto"
           />
-          <p className="text-[5px] text-start  lg:text-2xl ">
+          <p className=" text-start  pl-4 lg:text-1xl ">
             My name is Cesar Bacaro, born and raised in Cuba. I graduated as a
             Professor and percussion instrumentalist in 2003. After moving to
             the Capital (Havana) and performing with the top bands in the

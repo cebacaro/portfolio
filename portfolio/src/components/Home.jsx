@@ -15,7 +15,7 @@ export const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 1 }}
       transition={{ duration: 0.8, easy: "easyOut" }}
-      className="textContainer flex justify-center self-center content-center h-[90vh] w-[100%] items-center relative md:text-[20px]"
+      className="textContainer flex justify-center self-center content-center  w-[100%] items-center relative md:text-[20px]"
     >
       <div
         className="mainText text-[#a7ebd4] font-sans absolute z-10 font-semibold 
@@ -32,12 +32,12 @@ export const Home = () => {
           musician
         </m.h1>
       </div>
-      <div className="overlay absolute  h-[80vh] w-[100%]  bg-black bg-opacity-50  " />
+      <div className="overlay absolute  md:h-[85vh] w-[100%]  bg-black bg-opacity-50  " />
       <video
-        className=" flex  justify-center w-full"
+        className=" flex  justify-center h-[85vh] w-full"
         src={clip}
-        autoPlay
         loop
+        autoPlay
         muted
       />
     </m.div>

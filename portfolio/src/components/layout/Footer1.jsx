@@ -7,7 +7,7 @@ function Footer1() {
   return (
     <div className="footer flex flex-col gap-1  items-center relative bottom-20 lg:bottom-10">
       <NavLink
-        to="/contact"
+        to="/contactMe"
         className="contactMe text-yellow-500 hover:scale-125 duration-300 hover:text-teal-400 flex justify-center pb-3 tracking-[5px] font-bold"
       >
         Contact Me

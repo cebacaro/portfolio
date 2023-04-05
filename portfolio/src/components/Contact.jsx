@@ -29,8 +29,8 @@ export const Contact = () => {
     document.getElementById("success-message").style.display = "inline";
   };
   return (
-    <div>
-      <h3 className="text-gray-400  justify-center top-20 text-[40px] tracking-[12px] absolute  uppercase">
+    <div className="portfolio    h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
+      <h3 className="text-gray-400 justify-center top-5 text-[40px] tracking-[12px] absolute uppercase">
         Contact
       </h3>
       <m.div
