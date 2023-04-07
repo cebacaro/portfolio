@@ -4,6 +4,7 @@ import Portfolio from "../components/Portfolio";
 import { Home } from "../components/Home";
 import Contact from "../components/Contact";
 import { About } from "../components/About";
+import Resume from "../components/Resume";
 import { HeaderNav } from "../components/Layout/HeaderNav";
 import Sidebar from "../components/Layout/SideBar";
 import Footer1 from "../components/Layout/Footer1";
@@ -32,6 +33,7 @@ function MisRutas() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contactMe" element={<Contact />} />
+                <Route path="/resume" element={<Resume />} />
               </Routes>
             </AnimatePresence>
           </section>

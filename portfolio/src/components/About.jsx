@@ -3,8 +3,8 @@ import { motion as m } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="portfolio    h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
-      <h3 className="text-gray-400 justify-center  top-5 text-[40px] tracking-[12px] absolute uppercase">
+    <div className="portfolio   h-[50vh] relative  rounded-lg text-center  flex flex-col ">
+      <h3 className="text-gray-400 justify-center  top-5 lg:text-[40px] tracking-[12px] uppercase">
         about
       </h3>
       <m.div
@@ -12,15 +12,15 @@ export const About = () => {
         animate={{ y: "0%" }}
         exit={{ opacity: 1 }}
         transition={{ duration: 0.8, easy: "easyOut" }}
-        className="textContainerA flex  flex-col content-center lg:content-center lg:flex-1 lg:justify-center lg:items-center"
+        className="textContainerA flex flex-col  lg:content-center lg:flex-1 lg:justify-center lg:items-center"
       >
-        <div className="AboutContent flex   text-white lg:flex lg:w-[700px] ">
+        <div className="AboutContent  mt-40 text-xs text-white lg:flex lg:w-[700px] ">
           <img
-            className="img float-left h-[100px] w-[70px] p-1 lg:float-right lg:h-[300px] lg:w-[200px]"
+            className="img float-right h-[100px] w-[70px] p-1 lg:float-right lg:h-[300px] lg:w-[200px]"
             src={require("./images/-10327881921485465420.0 (1).jpg")}
             alt="foto"
           />
-          <p className=" text-start  pl-4 lg:text-1xl ">
+          <p className=" text-justify lg:text-[15px]">
             My name is Cesar Bacaro, born and raised in Cuba. I graduated as a
             Professor and percussion instrumentalist in 2003. After moving to
             the Capital (Havana) and performing with the top bands in the

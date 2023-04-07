@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion as m } from "framer-motion";
 import { PhoneIcon, MapIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export const Contact = () => {
+  const [showMessage, setShowMessage] = useState(false);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,17 +22,19 @@ export const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+
+          setShowMessage(true);
         },
         (error) => {
           alert("something went wrong");
         }
       );
-    document.getElementById("contact-form").style.display = "none";
-    document.getElementById("success-message").style.display = "inline";
+    // document.getElementById("contact-form").style.display = "none";
+    // document.getElementById("success-message").style.display = "inline";
   };
   return (
-    <div className="portfolio    h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
-      <h3 className="text-gray-400 justify-center top-5 text-[40px] tracking-[12px] absolute uppercase">
+    <div className="portfolio  w-[50vw]  h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
+      <h3 className="text-gray-400 justify-center top-5  lg:text-[40px] tracking-[12px] absolute uppercase">
         Contact
       </h3>
       <m.div
@@ -38,15 +42,18 @@ export const Contact = () => {
         animate={{ y: "0%" }}
         exit={{ opacity: 1 }}
         transition={{ duration: 0.8, easy: "easyOut" }}
-        className="contact  h-[80vh] w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
+        className="contact  h-full w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
       >
-        <div className="flex flex-col space-y-10 relative top-20">
-          <h4 className="text-3xl text-center text-white font-semibold">
-            Lets Talk.
-          </h4>
-
-          <div>
-            <div className="flex items-center text-white space-x-5 justify-center">
+        {showMessage ? (
+          <div id="success-message" className="flex top-1">
+            <h4 className="text-center  text-3xl pb-4 text-gray-300">
+              Thank you for reaching out! <br /> I will get back with you as
+              soon as I am able!
+            </h4>
+          </div>
+        ) : (
+          <div className="flex flex-col  relative lg:h-[70vh] ">
+            <div className="flex items-center text-white space-x-4 justify-center ">
               <PhoneIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
               <p className="text-thin">(123)3885689</p>
             </div>
@@ -60,52 +67,44 @@ export const Contact = () => {
               <EnvelopeIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
               <p className="text-thin">cebacaro@gmail.com</p>
             </div>
+            <form
+              className=" flex p-7 relative flex-col h-[600px] w-[80vw] lg:h-[60vh] md:top-5 lg:w-[30vw] bottom-10 "
+              id="contact-form"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <label className="pt-2 text-gray-400 flex">Name</label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Name"
+                className="w-full rounded-lg bg-gray-400"
+              />
+              <label className="pt-2 text-gray-400 flex">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="E-mail"
+                className="w-full rounded-lg bg-gray-400 "
+              />
+              <label className="pt-2 text-gray-400 flex">Message</label>
+              <textarea
+                rows="20"
+                cols="40"
+                name="message"
+                className="w-full rounded-lg bg-gray-400 h-[500px]"
+              />
+              <button
+                type="submit"
+                value="Send"
+                onClick={sendEmail}
+                className="border-black rounded-lg p-3 h-[40px] bg-orange-400  m-2 w-[90px] flex justify-center self-center text-center"
+              >
+                Send
+              </button>
+            </form>
           </div>
-        </div>
-
-        <form
-          className=" flex mt-10 p-7 flex-col h-[500px] w-[400px]"
-          id="contact-form"
-          ref={form}
-          onSubmit={sendEmail}
-        >
-          <label className="pt-2 text-gray-400 flex">Name</label>
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Name"
-            className="w-full rounded-lg bg-gray-400"
-          />
-          <label className="pt-2 text-gray-400 flex">Email</label>
-          <input
-            type="email"
-            name="user_email"
-            placeholder="E-mail"
-            className="w-full rounded-lg bg-gray-400 "
-          />
-          <label className="pt-2 text-gray-400 flex">Message</label>
-          <textarea
-            rows="20"
-            cols="50"
-            name="message"
-            className="w-full rounded-lg bg-gray-400"
-          />
-          <button
-            type="submit"
-            value="Send"
-            onClick={sendEmail}
-            className="border-black rounded-lg p-3 bg-orange-400  m-2 w-[90px] flex justify-center self-center"
-          >
-            Send
-          </button>
-        </form>
-
-        <div id="success-message">
-          <h4 className="text-center text-sm pb-4 text-gray-300">
-            Thank you for reaching out! <br /> I will get back with you as soon
-            as I am able!
-          </h4>
-        </div>
+        )}
       </m.div>
     </div>
   );

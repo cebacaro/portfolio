@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import clip from "./images/clip.mp4";
+import { NavLink } from "react-router-dom";
 
 const cards = [
   {
     id: 1,
     title: "Fitness Tracker",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, itaque culpa. Aperiam, cupiditate placeat. Exercitationem quisquam natus dicta unde, aspernatur sunt dolor velit sint eveniet autem facere. Soluta, laboriosam ipsam?15",
+      "Fullstack application constructing a tracker for exercise and routines with a co-developer within two weeks.",
     image: {},
     url: "https://ap-cb-fitness-trackr.netlify.app",
   },
@@ -15,7 +15,7 @@ const cards = [
     id: 2,
     title: "Juice Box",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, itaque culpa. Aperiam, cupiditate placeat. Exercitationem quisquam natus dicta unde, aspernatur sunt dolor velit sint eveniet autem facere. Soluta, laboriosam ipsam?15",
+      "Fullstack application constructing a Simple Tumblr clone functionality with a co-developer within two weeks",
     image: {},
     url: "https://juicebox-social.netlify.app",
   },
@@ -29,9 +29,8 @@ const cards = [
   {
     id: 4,
     title: "My Resume",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, itaque culpa. Aperiam, cupiditate placeat. Exercitationem quisquam natus dicta unde, aspernatur sunt dolor velit sint eveniet autem facere. Soluta, laboriosam ipsam?15",
-    video: clip,
+
+    content1: "Click To see my resume ",
   },
 ];
 
@@ -39,7 +38,7 @@ const Item = ({ item, selectedId, setSelectedId }) => {
   const isSelected = selectedId === item.id;
   return (
     <motion.div
-      className="card border-sky-500 border rounded-md w-[200px] h-[80px]"
+      className="card border-sky-500 border  rounded-md w-[200px] h-[80px]"
       layoutId={item.id}
       onClick={() => setSelectedId(isSelected ? null : item.id)}
       style={{
@@ -54,6 +53,7 @@ const Item = ({ item, selectedId, setSelectedId }) => {
         {item.title}
       </motion.h1>
       <motion.p className="text-center hidden">{item.content}</motion.p>
+      <motion.p className="text-center hidden">{item.content1}</motion.p>
       <motion.a className="text-center hidden">{item.url}</motion.a>
     </motion.div>
   );
@@ -62,12 +62,12 @@ const Item = ({ item, selectedId, setSelectedId }) => {
 const Portfolio = () => {
   const [selectedId, setSelectedId] = useState(null);
   return (
-    <div className="portfolio    h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
-      <h3 className="text-gray-400 justify-center top-5 text-[40px] tracking-[12px] absolute uppercase">
+    <div className="portfolio w-full relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
+      <h3 className="text-gray-400 justify-center top-5 lg:text-[40px] tracking-[12px] absolute uppercase">
         Portfolio
       </h3>
 
-      <section className="text-white  grid grid-cols-2 gap-5">
+      <section className="text-white  grid lg:grid-cols-2 gap-5">
         {cards.map((item) => (
           <Item
             key={item.id}
@@ -76,22 +76,16 @@ const Portfolio = () => {
             setSelectedId={setSelectedId}
           />
         ))}
-        <AnimatePresence>
+        <AnimatePresence className=" ">
           {selectedId && (
             <motion.div
-              className="popUp w-96 bg-slate-300 absolute justify-center"
+              className="popUp lg:w-[50vw] w-[70vw]  justify-around p-4 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-700 rounded-xl flex lg:absolute absolute lg:mr-[0px]"
               onClick={() => setSelectedId(null)}
               layoutId={selectedId}
               style={{
-                top: 200,
-                left: 300,
-                right: 300,
                 bottom: 200,
-                backgroundImage: "clip",
-                border: "black",
                 zIndex: 3,
-                color: "white",
-                padding: "20px",
+                justifySelf: "center",
               }}
               transition={{
                 duration: 0.6,
@@ -101,21 +95,23 @@ const Portfolio = () => {
               }}
               exit={{ opacity: 0, easy: "easy-out" }}
             >
-              <motion.h1>
+              <motion.h1 className="self-center text-2xl top-1">
                 {cards.find((item) => item.id === selectedId).title}
               </motion.h1>
               <motion.h5>
                 {cards.find((item) => item.id === selectedId).content}
               </motion.h5>
+              <NavLink to="/resume">
+                <button>
+                  {cards.find((item) => item.id === selectedId).content1}
+                </button>
+              </NavLink>
               <motion.a
-                href="https://ap-cb-fitness-trackr.netlify.app"
-                target={"_blank"}
+                href={cards.find((item) => item.id === selectedId).url}
+                target="_blank"
               >
                 {cards.find((item) => item.id === selectedId).url}
               </motion.a>
-              <motion.h5>
-                {cards.find((item) => item.id === selectedId).video}
-              </motion.h5>
             </motion.div>
           )}
         </AnimatePresence>
