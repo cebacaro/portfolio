@@ -2,9 +2,9 @@ import React from "react";
 
 export const HeaderNav = () => {
   return (
-    <header className="header flex ">
-      <div className="logo flex gap-1 top-20 text-center">
-        <span className="text-8xl text-center text-yellow-500 pl-2 font-extrabold">
+    <header className="header flex z-10">
+      <div className="logo flex gap-1 top-20 text-center lg:h-[60px]">
+        <span className="text-8xl  text-center text-yellow-500 pl-2 font-extrabold">
           C
         </span>
         <h3 className="block leading-6  text-2xl basis-20 text-yellow-500 font-sans font-thin align-baseline justify-center pt-4 ">

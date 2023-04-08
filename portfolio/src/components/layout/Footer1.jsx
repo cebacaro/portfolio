@@ -5,7 +5,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 
 function Footer1() {
   return (
-    <div className="footer flex flex-col gap-1  items-center relative bottom-20 lg:bottom-10  self-center">
+    <div className="footer flex flex-col gap-1  items-center relative bottom-20 lg:bottom-4  self-center md:bottom-1">
       <NavLink
         to="/contactMe"
         className="contactMe text-yellow-500 hover:scale-125 duration-300 hover:text-teal-400 flex justify-center pb-3 tracking-[5px]  font-bold"

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion as m } from "framer-motion";
 import { PhoneIcon, MapIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { NavLink } from "react-router-dom";
 
 export const Contact = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -34,7 +35,7 @@ export const Contact = () => {
   };
   return (
     <div className="portfolio  w-[50vw]  h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
-      <h3 className="text-gray-400 justify-center top-5  lg:text-[40px] tracking-[12px] absolute uppercase">
+      <h3 className="text-gray-400 justify-center top-5 lg:top-1 lg:text-[40px] tracking-[12px] absolute uppercase">
         Contact
       </h3>
       <m.div
@@ -52,10 +53,10 @@ export const Contact = () => {
             </h4>
           </div>
         ) : (
-          <div className="flex flex-col  relative lg:h-[70vh] ">
+          <div className="flex flex-col  relative lg:bottom-20 lg:h-[50vh] ">
             <div className="flex items-center text-white space-x-4 justify-center ">
               <PhoneIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
-              <p className="text-thin">(123)3885689</p>
+              <p className="text-thin">(337) 322-9593</p>
             </div>
 
             <div className="flex items-center text-white space-x-5 justify-center">
@@ -67,8 +68,22 @@ export const Contact = () => {
               <EnvelopeIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
               <p className="text-thin">cebacaro@gmail.com</p>
             </div>
+            <div className="flex items-center text-white space-x-5 justify-center">
+              <img
+                src={require("./images/icon.png")}
+                alt="foto"
+                className="text-yellow-500 h-4 w-4 animate-pulse"
+              />
+              <NavLink
+                to="https://www.linkedin.com/in/cesar-bacaro/"
+                className="text-thin z-20"
+                target="_blank"
+              >
+                www.linkedin.com/in/cesar-bacaro/
+              </NavLink>
+            </div>
             <form
-              className=" flex p-7 relative flex-col h-[600px] w-[80vw] lg:h-[60vh] md:top-5 lg:w-[30vw] bottom-10 "
+              className=" flex p-7 relative flex-col h-[500px] w-[80vw] lg:h-[60vh] md:h-[60vh] md:w-[30vw] lg:w-[30vw] bottom-10 "
               id="contact-form"
               ref={form}
               onSubmit={sendEmail}

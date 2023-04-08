@@ -10,6 +10,8 @@ const cards = [
       "Fullstack application constructing a tracker for exercise and routines with a co-developer within two weeks.",
     image: {},
     url: "https://ap-cb-fitness-trackr.netlify.app",
+    url1: "https://github.com/cebacaro/FitnessTrackr",
+    url2: "https://github.com/cebacaro/FitnessTrac-FrontEnd",
   },
   {
     id: 2,
@@ -18,13 +20,13 @@ const cards = [
       "Fullstack application constructing a Simple Tumblr clone functionality with a co-developer within two weeks",
     image: {},
     url: "https://juicebox-social.netlify.app",
+    url1: "https://github.com/cebacaro/juicebox",
+    url2: "https://github.com/pelnik/juicebox",
   },
   {
     id: 3,
-    title: "Puppy Bowl",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, itaque culpa. Aperiam, cupiditate placeat. Exercitationem quisquam natus dicta unde, aspernatur sunt dolor velit sint eveniet autem facere. Soluta, laboriosam ipsam?15",
-    image: {},
+    title: "e-commerce",
+    content: "Coming soon",
   },
   {
     id: 4,
@@ -55,6 +57,8 @@ const Item = ({ item, selectedId, setSelectedId }) => {
       <motion.p className="text-center hidden">{item.content}</motion.p>
       <motion.p className="text-center hidden">{item.content1}</motion.p>
       <motion.a className="text-center hidden">{item.url}</motion.a>
+      <motion.a className="text-center hidden">{item.url1}</motion.a>
+      <motion.a className="text-center hidden">{item.url2}</motion.a>
     </motion.div>
   );
 };
@@ -79,7 +83,7 @@ const Portfolio = () => {
         <AnimatePresence className=" ">
           {selectedId && (
             <motion.div
-              className="popUp lg:w-[50vw] w-[70vw]  justify-around p-4 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-700 rounded-xl flex lg:absolute absolute lg:mr-[0px]"
+              className="popUp lg:w-[50vw] w-[70vw]  justify-center p-4 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-x-white "
               onClick={() => setSelectedId(null)}
               layoutId={selectedId}
               style={{
@@ -95,22 +99,35 @@ const Portfolio = () => {
               }}
               exit={{ opacity: 0, easy: "easy-out" }}
             >
-              <motion.h1 className="self-center text-2xl top-1">
+              <motion.h1 className="self-center text-4xl pb-10 top-1 text-yellow-400 ">
                 {cards.find((item) => item.id === selectedId).title}
               </motion.h1>
-              <motion.h5>
+              <motion.h5 className="self-center lg:text-2xl top-1 pb-8 ">
                 {cards.find((item) => item.id === selectedId).content}
               </motion.h5>
               <NavLink to="/resume">
-                <button>
-                  {cards.find((item) => item.id === selectedId).content1}
-                </button>
+                {cards.find((item) => item.id === selectedId).content1}
               </NavLink>
               <motion.a
+                className="self-center lg:text-2xl top-1 "
                 href={cards.find((item) => item.id === selectedId).url}
                 target="_blank"
               >
                 {cards.find((item) => item.id === selectedId).url}
+              </motion.a>
+              <motion.a
+                className="self-center lg:text-2xl top-1 p-x-3 m-x-4 "
+                href={cards.find((item) => item.id === selectedId).url1}
+                target="_blank"
+              >
+                {cards.find((item) => item.id === selectedId).url1}
+              </motion.a>
+              <motion.a
+                className="self-center lg:text-2xl top-1 z-20"
+                href={cards.find((item) => item.id === selectedId).url2}
+                target="_blank"
+              >
+                {cards.find((item) => item.id === selectedId).url2}
               </motion.a>
             </motion.div>
           )}

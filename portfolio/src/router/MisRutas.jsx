@@ -16,14 +16,15 @@ function MisRutas() {
   return (
     <BrowserRouter>
       {/*header*/}
-      <div className="main-container flex w-full flex-col relative justify-center  bg-black">
+      <div className="main-container lg:h-[100vh]  flex w-full flex-col relative justify-center  bg-black">
         <HeaderNav />
+
         <div className="homeLayout flex ">
           <Sidebar />
 
           {/*Main*/}
           <section
-            className="content h-[87vh] flex w-full 
+            className="content h-[87vh] lg:h-[80vh] flex w-full 
           justify-center "
           >
             <AnimatePresence initial={true}>
