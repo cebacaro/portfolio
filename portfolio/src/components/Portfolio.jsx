@@ -80,56 +80,57 @@ const Portfolio = () => {
             setSelectedId={setSelectedId}
           />
         ))}
-        <AnimatePresence className=" ">
+        <AnimatePresence>
           {selectedId && (
-            <motion.div
-              className="popUp lg:w-[50vw] w-[70vw]  justify-center p-4 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-x-white "
-              onClick={() => setSelectedId(null)}
-              layoutId={selectedId}
-              style={{
-                bottom: 200,
-                zIndex: 3,
-                justifySelf: "center",
-              }}
-              transition={{
-                duration: 0.6,
-                delayChildren: 1,
-                staggerDirection: -1,
-                easy: "easyOut",
-              }}
-              exit={{ opacity: 0, easy: "easy-out" }}
-            >
-              <motion.h1 className="self-center text-4xl pb-10 top-1 text-yellow-400 ">
-                {cards.find((item) => item.id === selectedId).title}
-              </motion.h1>
-              <motion.h5 className="self-center lg:text-2xl top-1 pb-8 ">
-                {cards.find((item) => item.id === selectedId).content}
-              </motion.h5>
-              <NavLink to="/resume">
-                {cards.find((item) => item.id === selectedId).content1}
-              </NavLink>
-              <motion.a
-                className="self-center lg:text-2xl top-1 "
-                href={cards.find((item) => item.id === selectedId).url}
-                target="_blank"
+            <div className="flex  justify-center lg:items-center  lg:justify-center content-center">
+              <motion.div
+                className="popUp lg:w-[50vw] w-[70vw] justify-center lg:items-center lg:top-[12vh] lg:ml-44 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-x-white "
+                onClick={() => setSelectedId(null)}
+                layoutId={selectedId}
+                style={{
+                  bottom: 200,
+                  zIndex: 3,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delayChildren: 1,
+                  staggerDirection: -1,
+                  easy: "easyOut",
+                }}
+                exit={{ opacity: 0, easy: "easy-out" }}
               >
-                {cards.find((item) => item.id === selectedId).url}
-              </motion.a>
-              <motion.a
-                className="self-center lg:text-2xl top-1 p-x-3 m-x-4 "
-                href={cards.find((item) => item.id === selectedId).url1}
-                target="_blank"
-              >
-                {cards.find((item) => item.id === selectedId).url1}
-              </motion.a>
-              <motion.a
-                className="self-center lg:text-2xl top-1 z-20"
-                href={cards.find((item) => item.id === selectedId).url2}
-                target="_blank"
-              >
-                {cards.find((item) => item.id === selectedId).url2}
-              </motion.a>
-            </motion.div>
+                <motion.h1 className="self-center text-4xl pb-10 top-1 text-yellow-400 ">
+                  {cards.find((item) => item.id === selectedId).title}
+                </motion.h1>
+                <motion.h5 className="self-center lg:text-2xl top-1 pb-8 ">
+                  {cards.find((item) => item.id === selectedId).content}
+                </motion.h5>
+                <NavLink to="/resume">
+                  {cards.find((item) => item.id === selectedId).content1}
+                </NavLink>
+                <motion.a
+                  className="self-center lg:text-2xl top-1 text-[10px]"
+                  href={cards.find((item) => item.id === selectedId).url}
+                  target="_blank"
+                >
+                  {cards.find((item) => item.id === selectedId).url}
+                </motion.a>
+                <motion.a
+                  className="self-center lg:text-2xl top-1 p-x-3 m-x-4 text-[10px]"
+                  href={cards.find((item) => item.id === selectedId).url1}
+                  target="_blank"
+                >
+                  {cards.find((item) => item.id === selectedId).url1}
+                </motion.a>
+                <motion.a
+                  className="self-center lg:text-2xl text-[10px] top-1 z-20 "
+                  href={cards.find((item) => item.id === selectedId).url2}
+                  target="_blank"
+                >
+                  {cards.find((item) => item.id === selectedId).url2}
+                </motion.a>
+              </motion.div>
+            </div>
           )}
         </AnimatePresence>
       </section>

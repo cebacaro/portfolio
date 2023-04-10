@@ -34,7 +34,7 @@ export const Contact = () => {
     // document.getElementById("success-message").style.display = "inline";
   };
   return (
-    <div className="portfolio  w-[50vw]  h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
+    <div className="portfolio  w-[50vw] lg:h-[87vh] h-[97vh] relative  rounded-lg text-center items-center flex flex-col justify-evenly ">
       <h3 className="text-gray-400 justify-center top-5 lg:top-1 lg:text-[40px] tracking-[12px] absolute uppercase">
         Contact
       </h3>
@@ -43,7 +43,7 @@ export const Contact = () => {
         animate={{ y: "0%" }}
         exit={{ opacity: 1 }}
         transition={{ duration: 0.8, easy: "easyOut" }}
-        className="contact  h-full w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
+        className="contact  h-full lg:w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
       >
         {showMessage ? (
           <div id="success-message" className="flex top-1">
@@ -53,18 +53,18 @@ export const Contact = () => {
             </h4>
           </div>
         ) : (
-          <div className="flex flex-col  relative lg:bottom-20 lg:h-[50vh] ">
-            <div className="flex items-center text-white space-x-4 justify-center ">
-              <PhoneIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
+          <div className="flex flex-col  relative  lg:bottom-20 lg:h-[50vh] ">
+            <div className="flex items-center text-[10px] lg:text-[20px] text-white space-x-4 justify-center ">
+              <PhoneIcon className="text-yellow-500 h-5   w-5 animate-pulse" />
               <p className="text-thin">(337) 322-9593</p>
             </div>
 
-            <div className="flex items-center text-white space-x-5 justify-center">
+            <div className="flex items-center text-[10px] lg:text-[20px] text-white space-x-5 justify-center">
               <MapIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
               <p className="text-thin">New Orleans. LA</p>
             </div>
 
-            <div className="flex items-center text-white space-x-5 justify-center">
+            <div className="flex items-center text-[10px] lg:text-[20px] text-white space-x-5 justify-center">
               <EnvelopeIcon className="text-yellow-500 h-5 w-5 animate-pulse" />
               <p className="text-thin">cebacaro@gmail.com</p>
             </div>
@@ -76,14 +76,14 @@ export const Contact = () => {
               />
               <NavLink
                 to="https://www.linkedin.com/in/cesar-bacaro/"
-                className="text-thin z-20"
+                className="text-thin text-[10px] lg:text-[20px] z-20"
                 target="_blank"
               >
                 www.linkedin.com/in/cesar-bacaro/
               </NavLink>
             </div>
             <form
-              className=" flex p-7 relative flex-col h-[500px] w-[80vw] lg:h-[60vh] md:h-[60vh] md:w-[30vw] lg:w-[30vw] bottom-10 "
+              className=" flex p-7 relative flex-col h-[400px] w-[80vw] lg:h-[55vh] md:h-[60vh] md:w-[30vw] lg:w-[30vw] bottom-10 "
               id="contact-form"
               ref={form}
               onSubmit={sendEmail}

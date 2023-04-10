@@ -16,7 +16,7 @@ function MisRutas() {
   return (
     <BrowserRouter>
       {/*header*/}
-      <div className="main-container lg:h-[100vh]  flex w-full flex-col relative justify-center  bg-black">
+      <div className="main-container h-full lg:h-[100vh]  flex w-full flex-col relative justify-center  bg-black">
         <HeaderNav />
 
         <div className="homeLayout flex ">
