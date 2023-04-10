@@ -39,11 +39,12 @@ export const Contact = () => {
         Contact
       </h3>
       <m.div
-        initial={{ y: "100%" }}
-        animate={{ y: "0%" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 1 }}
         transition={{ duration: 0.8, easy: "easyOut" }}
         className="contact  h-full lg:w-[90%] rounded-lg text-center items-center flex flex-col justify-evenly "
+        style={{ overflow: "hidden" }}
       >
         {showMessage ? (
           <div id="success-message" className="flex top-1">
