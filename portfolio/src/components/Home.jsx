@@ -23,7 +23,7 @@ export const Home = () => {
       ) : (
         <m.div className="textContainer flex justify-center self-center content-center  w-[100%] items-center relative md:text-[20px] ">
           <div
-            className="mainText  font-sans  flex flex-col z-10 font-semibold 
+            className="mainText    flex flex-col z-10 font-semibold 
        text-2xl lg:text-5xl absolute text-yellow-500 justify-center ml-9"
           >
             <AnimatedText text="I'm Cesar Bacaro web developer  musician. " />
