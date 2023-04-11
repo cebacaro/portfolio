@@ -84,7 +84,7 @@ const Portfolio = () => {
           {selectedId && (
             <div className="flex  justify-center lg:items-center  lg:justify-center content-center">
               <motion.div
-                className="popUp lg:w-[50vw] w-[70vw] justify-center lg:items-center lg:top-[12vh] lg:ml-44 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-x-white "
+                className="popUp lg:w-[50vw] w-[70vw] justify-center lg:items-center lg:top-[12vh] lg:ml-44 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-blue-300 "
                 onClick={() => setSelectedId(null)}
                 layoutId={selectedId}
                 style={{

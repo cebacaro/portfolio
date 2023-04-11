@@ -34,7 +34,7 @@ function AnimatedText({ text, className = "" }) {
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`inline-block w-full text-sky-400 font-bold font-serif capitalize lg:text-6xl ${className}`}
+        className={`inline-block w-full text-teal-400 font-bold font-serif capitalize lg:text-6xl ${className}`}
       >
         {text.split(" ").map((word, idx) => (
           <m.span
