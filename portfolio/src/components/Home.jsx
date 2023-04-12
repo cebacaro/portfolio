@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AnimatedText from "./AnimatedText";
 import { motion as m } from "framer-motion";
-import clip from "./images/clip.mp4";
+import clip from "./images/background-portfolio-1.mp4";
 
 export const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -28,9 +28,9 @@ export const Home = () => {
           >
             <AnimatedText text="I'm Cesar Bacaro web developer  musician. " />
           </div>
-          <div className="overlay absolute  md:h-[85vh] w-[100%]  bg-black bg-opacity-50  " />
+          <div className="overlay absolute  md:h-[95vh] h-[95vh] w-[100%]  bg-black bg-opacity-50  " />
           <video
-            className=" flex  justify-center h-[85vh] w-full"
+            className=" flex  justify-center h-[100vh] w-full"
             src={clip}
             loop
             autoPlay
