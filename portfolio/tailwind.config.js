@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["ui-sans-serif", "system-ui"],
-      serif: ["Didot"],
+      sans: ["ui-sans-serif", "system-ui", "Gidole"],
+      serif: ["Didot", "Gidole"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald"],
       body: ['"Open Sans"'],
