@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 import Portfolio from "../components/Portfolio";
 import { Home } from "../components/Home";
 import Contact from "../components/Contact";
@@ -13,8 +13,9 @@ import { AnimatePresence } from "framer-motion";
 import "../App.css";
 
 function MisRutas() {
+  const Navigate = useNavigate();
   return (
-    <BrowserRouter>
+    <div>
       {/*header*/}
       <div className="main-container h-full lg:h-[100vh]  flex w-full flex-col relative justify-center  bg-black">
         <HeaderNav />
@@ -35,6 +36,7 @@ function MisRutas() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contactMe" element={<Contact />} />
                 <Route path="/resume" element={<Resume />} />
+                <Route path="*" element={<Navigate to="/" replace={true} />} />
               </Routes>
             </AnimatePresence>
           </section>
@@ -45,7 +47,7 @@ function MisRutas() {
         <Footer1 />
       </div>
       {/*Footer*/}
-    </BrowserRouter>
+    </div>
   );
 }
 export default MisRutas;

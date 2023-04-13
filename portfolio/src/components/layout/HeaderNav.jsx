@@ -6,7 +6,7 @@ export const HeaderNav = () => {
     <header className="header flex z-10">
       <NavLink
         to="/"
-        className="logo flex gap-1 top-20 text-center lg:h-[60px]"
+        className="logo flex gap-1 top-20 lg:ml-[70px] text-center lg:h-[60px]"
       >
         <span className="text-8xl  text-center text-yellow-500 pl-2 font-extrabold">
           C

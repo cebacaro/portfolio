@@ -25,8 +25,12 @@ const cards = [
   },
   {
     id: 3,
-    title: "e-commerce",
-    content: "Coming soon",
+    title: "Nile ",
+    content:
+      "Fullstack application constructing a Simple e-commerce functionality with a team within two weeks",
+    url: "https://glittering-faloodeh-58717e.netlify.app/",
+    url1: "https://github.com/Central-Mountain-Nile/Nile-frontend-app",
+    url2: "https://github.com/Central-Mountain-Nile/Nile-Backend",
   },
   {
     id: 4,
@@ -105,7 +109,7 @@ const Portfolio = () => {
                 <motion.h5 className="self-center lg:text-2xl top-1 pb-8 ">
                   {cards.find((item) => item.id === selectedId).content}
                 </motion.h5>
-                <NavLink to="/resume">
+                <NavLink to="/resume" className="text-3xl">
                   {cards.find((item) => item.id === selectedId).content1}
                 </NavLink>
                 <motion.a

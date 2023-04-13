@@ -1,11 +1,12 @@
 import "./App.css";
 import MisRutas from "./Router/MisRutas";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <MisRutas />
-    </div>
+    </BrowserRouter>
   );
 }
 

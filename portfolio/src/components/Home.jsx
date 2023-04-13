@@ -28,9 +28,9 @@ export const Home = () => {
           >
             <AnimatedText text="I'm Cesar Bacaro web developer  musician. " />
           </div>
-          <div className="overlay absolute  md:h-[95vh] h-[95vh] w-[100%]  bg-black bg-opacity-50  " />
+          <div className="overlay absolute lg:h-[98vh] md:h-[95vh] h-[95vh] w-[100%]  bg-black bg-opacity-50  " />
           <video
-            className=" flex  justify-center h-[100vh] w-full"
+            className=" flex  justify-center  lg:max-wh]  lg:h-[100vh] "
             src={clip}
             loop
             autoPlay
