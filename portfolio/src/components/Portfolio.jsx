@@ -28,7 +28,7 @@ const cards = [
     title: "Nile ",
     content:
       "Fullstack application constructing a Simple e-commerce functionality with a team within two weeks",
-    url: "https://glittering-faloodeh-58717e.netlify.app/",
+    url: "https://unrivaled-gaufre-e3e78d.netlify.app/",
     url1: "https://github.com/Central-Mountain-Nile/Nile-frontend-app",
     url2: "https://github.com/Central-Mountain-Nile/Nile-Backend",
   },
@@ -88,7 +88,7 @@ const Portfolio = () => {
           {selectedId && (
             <div className="flex  justify-center lg:items-center  lg:justify-center content-center">
               <motion.div
-                className="popUp lg:w-[50vw] w-[70vw] justify-center lg:items-center lg:top-[12vh] lg:ml-44 h-[60vh] text-gray-300  top-[80px] flex-col text-center bg-gray-500 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-blue-300 "
+                className="popUp lg:w-[50vw] w-[70vw] justify-center lg:items-center lg:top-[12vh] lg:ml-44 h-[60vh] text-gray-300  top-[80px] flex-col text-center backdrop-blur-sm bg-black/40 rounded-xl flex lg:absolute absolute lg:mr-[0px] border border-sky-500"
                 onClick={() => setSelectedId(null)}
                 layoutId={selectedId}
                 style={{
@@ -106,28 +106,28 @@ const Portfolio = () => {
                 <motion.h1 className="self-center text-4xl pb-10 top-1 text-yellow-400 ">
                   {cards.find((item) => item.id === selectedId).title}
                 </motion.h1>
-                <motion.h5 className="self-center lg:text-2xl top-1 pb-8 ">
+                <motion.h5 className="self-center text-center mx-20 lg:text-1xl top-1 pb-8 ">
                   {cards.find((item) => item.id === selectedId).content}
                 </motion.h5>
-                <NavLink to="/resume" className="text-3xl">
+                <NavLink to="/resume" className="text-2xl">
                   {cards.find((item) => item.id === selectedId).content1}
                 </NavLink>
                 <motion.a
-                  className="self-center lg:text-2xl top-1 text-[10px]"
+                  className="self-center lg:text-1xl top-1 text-[10px]"
                   href={cards.find((item) => item.id === selectedId).url}
                   target="_blank"
                 >
                   {cards.find((item) => item.id === selectedId).url}
                 </motion.a>
                 <motion.a
-                  className="self-center lg:text-2xl top-1 p-x-3 m-x-4 text-[10px]"
+                  className="self-center lg:text-1xl top-1 p-x-3 m-x-4 text-[10px]"
                   href={cards.find((item) => item.id === selectedId).url1}
                   target="_blank"
                 >
                   {cards.find((item) => item.id === selectedId).url1}
                 </motion.a>
                 <motion.a
-                  className="self-center lg:text-2xl text-[10px] top-1 z-20 "
+                  className="self-center lg:text-1xl text-[10px] top-1 z-20 "
                   href={cards.find((item) => item.id === selectedId).url2}
                   target="_blank"
                 >
