@@ -1,0 +1,8 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5DRgdKFQp9hEiwUlDd4G4I2cMo5fcwym9C0u7c+mcRrVVUOFM/EUrMcV1hGXLXAlTC0jmDI9dAWtpZD+pSdI3q3+mKac0g6CuJd8ZYxhdDCRkAf3+bWI4UmE60Q9ZeWeECjje5CZdWhbXj8oXOFcv6xy0jgQrhjXfR9uMCfqjHYPo8cQeJWhmlcXRB13+LTbpXIBi8EXjig99LzN3YIXZwFEBdgh6sYqnRKS7r2c/ixoxw9VpV/LFew0Bw9DSn+H5BhTpMTk1IUXdWAiMmgKTrZwVV+RfOJyS04Q+UB0LJQhieGw8itoNyTm3W14Ph4BvwqonGSDICf04I+ArdKev cebacaro@gmail.com
+
+
+
+Dns txt record
+
+
+v=spf1 a mx include:websitewelcome.com ~all
