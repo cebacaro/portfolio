@@ -13,13 +13,13 @@ export const About = () => {
         transition={{ duration: 1 }}
         className="textContainerA flex flex-col lg:w-[70vw] lg:content-center lg:flex-1 lg:justify-center lg:items-center"
       >
-        <div className="AboutContent lg:min-h-[40vh] border h-[64vh] rounded-lg mt-10 bg-[#ffffff2d] lg:mt-30 text-xs text-white lg:flex p-4 lg:w-[700px]">
+        <div className="AboutContent lg:min-h-[40vh] border m-auto rounded-lg mt-10 backdrop-blur-sm bg-white/20 shadow-md shadow-zinc-50 lg:mt-30 text-xs text-white lg:flex p-4 lg:w-[700px] absolute">
           <img
-            className="img float-right rounded-md h-[100px] w-[70px] p-1 lg:float-right md:h-[200px] lg:h-[410px] lg:w-[400px]"
+            className="img float-right rounded-md m-auto h-[100px] w-[70px] p-1 lg:float-right md:h-[200px] lg:h-[410px] lg:w-[400px]"
             src={require("./images/-10327881921485465420.0 (1).jpg")}
             alt="foto"
           />
-          <p className=" leading-[12px] text-justify text-gray-400 text-[10px] lg:pl-3 lg:leading-[20px] lg:text-[20px]">
+          <p className=" leading-[12px] m-auto text-justify text-gray-400 text-[10px] lg:pl-3 lg:leading-[20px] lg:text-[20px]">
             My name is Cesar Bacaro, born and raised in Cuba. I graduated as a
             Professor and percussion instrumentalist in 2003. After moving to
             the Capital (Havana) and performing with the top bands in the

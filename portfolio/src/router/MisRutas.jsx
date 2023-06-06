@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Portfolio from "../components/Portfolio";
 import { Home } from "../components/Home";
 import Contact from "../components/Contact";
